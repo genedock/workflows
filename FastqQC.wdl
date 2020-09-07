@@ -4,11 +4,12 @@ task fastqc{
         Int thread
         String name
         command {
+                set -x
                 fastqc=/bioapp/FastQC_0_11_9/fastqc
                 mkdir ${name}
                 $fastqc -t ${thread} -o ${name} ${sep=' ' read}
                 tar zcvf ${name}.tar.gz ${name}
-        } 
+        }
         output{
                 File Outfastqc="${name}.tar.gz"
         }
