@@ -1,4 +1,4 @@
-### fq文件按照指定行数拆分,默认按照5千万行拆分。
+### fq文件按照指定行数拆分
 task split_fq{
     File fq
     Int? split_line
@@ -10,7 +10,7 @@ task split_fq{
         rm ${fq}
     >>>
     runtime {
-        docker: "public/genedock_wgs:1.0"
+        docker: "seqflow/genedock_wgs:1.0"
         memory: "4G"
         disk: "400G"
         cpu: 2
@@ -53,7 +53,7 @@ task align_bwa{
                 $samtools sort -@  ${thread} -o $sample_id.$read_name.sort.bam -O bam $sample_id.sam
         >>>
         runtime {
-                docker: "public/genedock_wgs:1.0"
+                docker: "seqflow/genedock_wgs:1.0"
                 memory: "16G"
                 disk: "100G"
                 cpu: 8
@@ -70,13 +70,13 @@ task MergeBam_GATK4{
         mkdir -p /var/data/tmp
         gatk=/bioapp/gatk-4.1.4.1/gatk
         javaOption="-Xmx8g -Djava.io.tmpdir=/var/data/tmp -XX:ParallelGCThreads=4 -XX:-UseGCOverheadLimit"
-		$gatk --java-options "$javaOption" MergeSamFiles -I ${sep=' -I ' bam}  -O merge.bam --USE_THREADING true --TMP_DIR /var/data/tmp
-	>>>
+        $gatk --java-options "$javaOption" MergeSamFiles -I ${sep=' -I ' bam}  -O merge.bam --USE_THREADING true --TMP_DIR /var/data/tmp
+    >>>
         output{
                 File MergeBam="merge.bam"
         }
         runtime {
-                docker: "public/genedock_wgs:1.0"
+                docker: "seqflow/genedock_wgs:1.0"
                 memory: "16G"
                 disk: "100G"
                 cpu: 4
@@ -123,7 +123,7 @@ task WES_MarkdupGvcf_GATK4{
                 File MarkdupBai="${sample_name}.mkdup.bai"
         }
         runtime {
-                docker: "public/genedock_wgs:1.0"
+                docker: "seqflow/genedock_wgs:1.0"
                 memory: "16G"
                 disk: "100G"
                 cpu: 8
@@ -161,7 +161,7 @@ task WES_VcfFilter_GATK4{
                 File FltIndel="${sample_name}.flt.indel.vcf.gz"
         }
         runtime {
-                docker: "public/genedock_wgs:1.0"
+                docker: "seqflow/genedock_wgs:1.0"
                 memory: "16G"
                 disk: "50G"
                 cpu: 4
