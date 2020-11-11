@@ -1,0 +1,4 @@
+{
+  "BAMtoCRAM.refname": "String (optional, default = \"hg19\")",
+  "BAMtoCRAM.input_bam": "File" 
+}
