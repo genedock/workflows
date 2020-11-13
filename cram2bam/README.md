@@ -1,7 +1,17 @@
-【概述】
+## cram2bam
 
-使用samtool软件将cbam文件转为bam格式。  
+###【概述】
 
-【软件版本】
+使用samtool软件将cram文件转为bam格式。  
 
-samtools 1.9。
+###【软件版本】
+
+samtools 1.10。
+
+###【输入文件】
+
+cram文件。
+
+###【输出文件】
+
+bam文件。

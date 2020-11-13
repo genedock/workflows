@@ -10,7 +10,7 @@ task cramTobam{
         File bam="out.bam"
     }
     runtime {
-        docker: "public/fqfilter_bwa_samtools:1.1"
+        docker: "seqflow/genedock_wgs:1.0"
         memory: "30G"
         disk: "1000G"
         cpu: 16

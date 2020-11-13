@@ -1,4 +1,4 @@
-##bam2cram
+## bam2cram
 
 ###【概述】
 
@@ -6,7 +6,7 @@
 
 ###【软件版本】
 
-samtools 1.9。
+samtools 1.10。
 
 ###【输入文件】
 
