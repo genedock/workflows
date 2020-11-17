@@ -1,0 +1,8 @@
+{
+    "wf_nanopore.id": "String (optional, default = \"foo\")", 
+    "wf_nanopore.thread": "Int (optional, default = 8)", 
+    "wf_nanopore.split_line": "Int (optional, default = 50000000)", 
+    "wf_nanopore.sm": "String (optional, default = \"bar\")", 
+    "wf_nanopore.threshold": "Int (optional, default = 5)", 
+    "wf_nanopore.fq": "File"
+}
