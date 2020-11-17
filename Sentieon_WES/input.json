@@ -1,0 +1,24 @@
+{
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.sliding_window": "String (optional, default = \"4:15\")",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.illumina_clip": "String (optional, default = \"2:30:10\")",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.RmdupVcf.call_conf": "Int (optional, default = 30)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.RmdupVcf.variant_caller_algo": "String (optional, default = \"Genotyper\")",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.base_quality_type": "Int (optional, default = 33)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.intervals": "File",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.minlength": "Int (optional, default = 36)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.trailing": "Int (optional, default = 3)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.head_crop": "Int (optional, default = 0)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.read_id": "String (optional, default = \"sample\")",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.sample_fq2": "File",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.leading": "Int (optional, default = 3)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.crop": "Int (optional, default = 10000)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.sample_name": "String (optional, default = \"sample\")",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.adaptor": "File (optional, default = \"public:/reference/adaptor_Trimmomatic/TruSeq3-PE-2.fa\")",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.sample_fq1": "File",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.refname": "String (optional, default = \"b37\")",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.read_lib": "String (optional, default = \"lib\")",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.RmdupVcf.emit_conf": "Int (optional, default = 30)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.RmdupVcf.thread": "Int (optional, default = 8)",
+  "WES_Germline_BWA_Sentieon_ContainRef_stat.FqFltMap.read_sm": "String (optional, default = \"sample\")"
+}
+

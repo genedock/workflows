@@ -1,0 +1,6 @@
+{
+  "FqQc.fq": "Array[File]",
+  "FqQc.thread": "Int (optional, default = 4)",
+  "FqQc.name": "String (optional, default = \"QC\")"
+}
+

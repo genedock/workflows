@@ -1,0 +1,16 @@
+{
+  "wf_WES.sample_id": "String (optional, default = \"id\")",
+  "wf_WES.sample_fq1": "File",
+  "wf_WES.bwa_thread": "Int (optional, default = 8)",
+  "wf_WES.sample_sm": "String (optional, default = \"sm\")",
+  "wf_WES.ref": "String (optional, default = \"hg19\")",
+  "wf_WES.split_line": "Int (optional, default = 50000000)",
+  "wf_WES.sample_pl": "String (optional, default = \"illumina\")",
+  "wf_WES.stand_call_conf": "Int (optional, default = 30)",
+  "wf_WES.bed": "File",
+  "wf_WES.saw": "Boolean (optional, default = true)",
+  "wf_WES.sample_pu": "String (optional, default = \"pu\")",
+  "wf_WES.sample_fq2": "File",
+  "wf_WES.sample_lb": "String (optional, default = \"lb\")"
+}
+

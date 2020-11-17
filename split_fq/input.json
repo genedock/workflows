@@ -1,0 +1,6 @@
+{
+  "saw.split_line": "Int (optional, default = 50000000)",
+  "saw.proband_fq1": "Array[File]",
+  "saw.proband_fq2": "Array[File]"
+}
+
