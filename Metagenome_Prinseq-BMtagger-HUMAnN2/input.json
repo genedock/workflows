@@ -1,0 +1,11 @@
+{
+  "metagenome.read1": "File (optional, default = \"public:/demo-data/Metagenome_Prinseq-BMtagger-HUMAnN2/SRR061695_1M_1.fastq.gz\")",
+  "metagenome.Reference_fa": "File (optional, default = \"public:/database/BMtagger/hs37.fa\")",
+  "metagenome.srprismFiles": "File (optional, default = \"public:/database/BMtagger/hs37.srprism.tar.gz\")",
+  "metagenome.ProteinDatabase": "File (optional, default = \"public:/database/humann2/uniref50_annotated.tar.gz\")",
+  "metagenome.read2": "File (optional, default = \"public:/demo-data/Metagenome_Prinseq-BMtagger-HUMAnN2/SRR061695_1M_2.fastq.gz\")",
+  "metagenome.NucleotideDatabase": "File (optional, default = \"public:/database/humann2/full_chocophlan.v0.1.1.tar.gz\")",
+  "metagenome.BitmaskFile": "File (optional, default = \"public:/database/BMtagger/hs37.bitmask\")",
+  "metagenome.params": "File (optional, default = \"public:/demo-data/prinseq/prinseq.params\")"
+}
+
