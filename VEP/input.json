@@ -1,0 +1,6 @@
+{
+  "VEP_annotation.refseq": "String (optional, default = \"Yes\")",
+  "VEP_annotation.input_vcf": "File",
+  "VEP_annotation.assembly": "String (optional, default = \"GRCh37\")"
+}
+
