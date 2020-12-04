@@ -1,18 +1,18 @@
 ## VEP
 
-###【概述】
+### 【概述】
 
 使用Variant Effect Predictor软件对变异进行注释，标记变异对基因、转录组、蛋白序列和调控的影响。支持GRCh37/GRCh38。 
 
-###【软件版本】
+### 【软件版本】
 
 vep 101。
 
-###【输入文件】
+### 【输入文件】
 
 vcf文件。
 
-###【输出文件】
+### 【输出文件】
 
 注释后的vcf文件。
 
@@ -22,7 +22,7 @@ VEP_annotation.refseq：可输入“Yes” 或其他，只有在“Yes”时使�
 
 VEP_annotation.assembly：支持GRCh37/GRCh38，需与输入vcf一致。
 
-###【数据库及版本】
+### 【数据库及版本】
 
 注释内容，参看http://asia.ensembl.org/info/docs/tools/vep/script/vep_cache.html。
 
