@@ -1,0 +1,10 @@
+{
+  "Rapid_Speed_WGS_GATK4.lane_fq1": "Array[File] (optional, default = [\"genedockdx:/home/admin/wdl_test/rawdata/read1.fq.gz\"])",
+  "Rapid_Speed_WGS_GATK4.refname": "String (optional, default = \"hg19\")",
+  "Rapid_Speed_WGS_GATK4.lane_fq2": "Array[File] (optional, default = [\"genedockdx:/home/admin/wdl_test/rawdata/read2.fq.gz\"])",
+  "Rapid_Speed_WGS_GATK4.thread": "Int? (optional, default = 4)",
+  "Rapid_Speed_WGS_GATK4.otherBed": "File (optional, default = \"genedockdx:/home/admin/Database/hg19.other.bed\")",
+  "Rapid_Speed_WGS_GATK4.sample_id": "String (optional, default = \"iw160\")",
+  "Rapid_Speed_WGS_GATK4.compression": "Int? (optional, default = 4)"
+}
+

@@ -1,0 +1,10 @@
+{
+  "WGS_Germline_BWA_GATK3.lane_fq1": "Array[File] (optional, default = [\"genedockdx:/home/admin/wdl_test/rawdata/read1.fq.gz\"])",
+  "WGS_Germline_BWA_GATK3.refname": "String (optional, default = \"hg19\")",
+  "WGS_Germline_BWA_GATK3.sample_id": "String (optional, default = \"iw160\")",
+  "WGS_Germline_BWA_GATK3.thread": "Int? (optional, default = 4)",
+  "WGS_Germline_BWA_GATK3.otherBed": "File (optional, default = \"genedockdx:/home/admin/Database/hg19.other.bed\")",
+  "WGS_Germline_BWA_GATK3.compression": "Int? (optional, default = 4)",
+  "WGS_Germline_BWA_GATK3.lane_fq2": "Array[File] (optional, default = [\"genedockdx:/home/admin/wdl_test/rawdata/read2.fq.gz\"])"
+}
+
