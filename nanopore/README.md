@@ -1,2 +1,2 @@
-#nanopore workflow
+# nanopore workflow
 三代的Nanopore数据进行小突变和结构变异的检测，其用到的软件和步骤与Nanopore官方的EPI2ME平台上的流程保持一致
