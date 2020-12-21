@@ -1,18 +1,20 @@
 task split_fq{
 	File fq
-	Int split_line
 	command{
-		set -x
-		fq_name=$(basename ${fq} .gz)
-		echo "fq name is $fq_name"
-		pigz -dc ${fq}|/bioapp/split -d -l ${default=50000000 split_line} --filter='pigz > $FILE.gz' - $fq_name.
-		rm ${fq}
+    set -ex
+    date "+%G-%m-%d %H:%M:%S"
+    fq_name=$(echo ${fq}|cut -d . -f1)
+    echo "fq name is $fq_name"
+    /bioapp/fastp -i ${fq} --split_by_lines 50000000 -A -G -Q -L --thread 4 --compression 4 -o $fq_name.new.gz
+    ls
+    rm ${fq}
+    date "+%G-%m-%d %H:%M:%S"
 	}
  	runtime {
-		docker: "public/genedock_wgs:1.0"
-     	memory: "4G"
+		docker: "seqflow/genedock_wgs:1.1"
+     	memory: "8G"
 		disk: "800G" 
-		cpu: 2
+		cpu: 4
   	}
 	output{
 		Array[File] output_fq = glob("*.gz")
@@ -31,7 +33,7 @@ task minimap2{
       #samtools sort -@ ${thread} -O BAM  -o ${sm}.sort.bam out.sam
   }
   runtime {
-		docker: "multitest/genedock_nanopore:1.1"
+		docker: "seqflow/genedock_nanopore:1.1"
 		memory: "32G"
 		disk: "1000G" 
 		cpu: 8
@@ -48,7 +50,7 @@ task mergeBam{
 		mosdepth stat merge.bam
 	}
 	runtime {
-		docker: "multitest/genedock_nanopore:1.1"
+		docker: "seqflow/genedock_nanopore:1.1"
 		memory: "16G"
 		disk: "800G" 
 		cpu: 4
@@ -66,7 +68,7 @@ task SV{
 		sniffles -m ${bam} -v output.sv.vcf --genotype -t ${thread} -s ${threshold}
 	}
 	runtime {
-		docker: "multitest/genedock_nanopore:1.1"
+		docker: "seqflow/genedock_nanopore:1.1"
 		memory: "16G"
 		disk: "400G" 
 		cpu: 4
@@ -77,7 +79,7 @@ task SV{
 }
 task SV_Anno{
 	File vcf
-	command {
+	command <<<
 		date "+%G-%m-%d %H:%M:%S"
 		cd /var/data/
 		set -ex
@@ -88,11 +90,12 @@ task SV_Anno{
 		export ANNOTSV=/bioapp/AnnotSV_2.2
 		export PATH=$ANNOTSV/bin:$PATH
 		ANNOTSV="/bioapp/AnnotSV_2.2"
-		$ANNOTSV/bin/AnnotSV/AnnotSV.tcl -SVinputFile  ${vcf} -SVinputInfo 1 -outputFile ./SV.annotated.tsv -svtBEDcol 4  
+    awk 'BEGIN{OFS="\t"}{x=split($8,sv,";");for(i=1;i<=x;i++){if(sv[i]~"SVTYPE"){split(sv[i],type,"=")}}{if(length($4)>10000){$4="<"type[2]">"}else if(length($5)>10000){$5="<"type[2]">"}else{pass};print $0"\t"length($4)"\t"length($5)}}' ${vcf} > sv.vcf
+		$ANNOTSV/bin/AnnotSV/AnnotSV.tcl -SVinputFile  sv.vcf -SVinputInfo 1 -outputFile ./SV.annotated.tsv -svtBEDcol 4
 		date "+%G-%m-%d %H:%M:%S" 
-	}
+  >>>
 	runtime {
-		docker: "multitest/cnv_filt:2.0"
+		docker: "seqflow/cnv_filt:1.0"
 		memory: "8G"
 		disk: "100G" 
 		cpu: 4
@@ -101,20 +104,21 @@ task SV_Anno{
   		File outSVanno="/var/data/SV.annotated.tsv"
   	}
 }
+
 task Variant{
 	File bam
 	command{
 		ref=/rdata/genedock/hg19_broad/ucsc.hg19.fasta
 		export PATH=/usr/local/miniconda/envs/medaka/bin/:$PATH
     samtools index ${bam}
-		medaka_variant -i ${bam} -f $ref -t 8 -b 12
+		medaka_variant -i ${bam} -f $ref -t 16 -b 30
 		cp medaka_variant/round_1_unfiltered.vcf out.vcf
 	}
 	runtime {
-		docker: "multitest/genedock_nanopore:1.1"
-		memory: "16G"
+		docker: "seqflow/genedock_nanopore:1.1"
+		memory: "32G"
 		disk: "800G" 
-		cpu: 8
+		cpu: 16
   	}
   	output{
   		File outvcf="out.vcf"
@@ -122,15 +126,13 @@ task Variant{
 }
 workflow wf_nanopore{
 	File fq
-	Int split_line=50000000
 	Int thread=8
   Int threshold=5
 	String sm="bar"
 	String id="foo"
 	call split_fq{
 		input:
-			fq=fq,
-			split_line=split_line,
+			fq=fq
 	}
 	scatter(sfq in split_fq.output_fq){
 		call minimap2{
@@ -156,15 +158,15 @@ workflow wf_nanopore{
 		input:
 			vcf=SV.outSV
 	}
-	call Variant{
-		input:
-			bam=mergeBam.outbam
-	}
+#	call Variant{
+#		input:
+#			bam=mergeBam.outbam
+#	}
 	output{
 		mergeBam.outbam
 		mergeBam.outbamstat
 		SV.outSV
 		SV_Anno.outSVanno
-		Variant.outvcf
+#		Variant.outvcf
 	}
 }
