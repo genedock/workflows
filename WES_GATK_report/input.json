@@ -1,0 +1,20 @@
+{
+    "wf_WES.lane_fq1": "Array[File] (optional, default = [\"public:/demo-data/WES-Germline_NA12878_smallsize/NA12878-NGv3-LAB1360-A_1000000_1.fastq.gz\"])",
+    "wf_WES.lane_fq2": "Array[File] (optional, default = [\"public:/demo-data/WES-Germline_NA12878_smallsize/NA12878-NGv3-LAB1360-A_1000000_2.fastq.gz\"])",
+    "wf_WES.report_config": "File (optional, default = \"genedockdx:/home/admin/script/WES_report.tar.gz\")",
+    "wf_WES.bed": "File (optional, default = \"public:/demo-data/WES-Germline_NA12878_NGv3-LAB1360/NA12878-NGv3-LAB1360-A-regions.bed\")",
+    "wf_WES.lane_id": "Array[String] (optional, default = [\"L1\"])",
+    "wf_WES.sample_lb": "String (optional, default = \"lb\")",
+    "wf_WES.sample_pu": "String (optional, default = \"pu\")",
+    "wf_WES.sample_sm": "String (optional, default = \"sm\")",
+    "wf_WES.sample_pl": "String (optional, default = \"illumina\")",
+    "wf_WES.ref": "String (optional, default = \"hs37d5\")",
+    "wf_WES.gender": "String (optional, default = \"Male\")",
+    "wf_WES.compression": "Int? (optional, default = 4)",
+    "wf_WES.thread": "Int? (optional, default = 4)",
+    "wf_WES.bwa_thread": "Int (optional, default = 8)",
+    "wf_WES.stand_call_conf": "Int (optional, default = 30)",
+    "wf_WES.saw": "Boolean (optional, default = false)",
+    "wf_WES.split_line": "Int (optional, default = 50000000)",
+    "wf_WES.sample_json.workflow_name": "String (optional, default = \"WES_GATK4\")"
+}
