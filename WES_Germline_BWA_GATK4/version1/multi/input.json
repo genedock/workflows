@@ -1,0 +1,20 @@
+{
+    "multi_wes.lane_fq1": [["public:/demo-data/WES-Germline_NA12878_smallsize/NA12878-NGv3-LAB1360-A_1000000_1.fastq.gz"],["public:/demo-data/WES-Germline_NA12878_smallsize/NA12878-NGv3-LAB1360-A_1000000_1.fastq.gz"]],
+    "multi_wes.lane_fq2": [["public:/demo-data/WES-Germline_NA12878_smallsize/NA12878-NGv3-LAB1360-A_1000000_2.fastq.gz"],["public:/demo-data/WES-Germline_NA12878_smallsize/NA12878-NGv3-LAB1360-A_1000000_2.fastq.gz"]],
+    "multi_wes.bed": "public:/demo-data/WES-Germline_NA12878_NGv3-LAB1360/NA12878-NGv3-LAB1360-A-regions.bed",
+    "multi_wes.sample_lb": ["lb1","lb2"],
+    "multi_wes.sample_pu": "pu",
+    "multi_wes.sample_id": ["test1","test2"],
+    "multi_wes.sample_pl": "illumina",
+    "multi_wes.stand_call_conf": 30,
+    "multi_wes.adapter_read1": "AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA",
+    "multi_wes.adapter_read2": "CAACTCCTTGGCTCACAGAACGACATGGCTACGATCCGACTT",
+    "multi_wes.refname": "hs37d5",
+    "multi_wes.misMatch": 1,
+    "multi_wes.nRate": 0.1,
+    "multi_wes.lowQual": 5,
+    "multi_wes.qualRate": 0.5,
+    "multi_wes.qualSys": 2,
+    "multi_wes.bwa_thread": 8,
+    "multi_wes.refseq": "Yes"
+}

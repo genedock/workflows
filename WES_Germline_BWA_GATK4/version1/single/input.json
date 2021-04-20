@@ -1,0 +1,20 @@
+{
+    "wf_WES.lane_fq1": ["public:/demo-data/WES-Germline_NA12878_smallsize/NA12878-NGv3-LAB1360-A_1000000_1.fastq.gz"],
+    "wf_WES.lane_fq2": ["public:/demo-data/WES-Germline_NA12878_smallsize/NA12878-NGv3-LAB1360-A_1000000_2.fastq.gz"],
+    "wf_WES.bed": "public:/demo-data/WES-Germline_NA12878_NGv3-LAB1360/NA12878-NGv3-LAB1360-A-regions.bed",
+    "wf_WES.sample_pu": "pu",
+    "wf_WES.sample_id": "sample",
+    "wf_WES.sample_pl": "illumina",
+    "wf_WES.stand_call_conf": 30,
+    "wf_WES.adapter_read1": "AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA",
+    "wf_WES.adapter_read2": "CAACTCCTTGGCTCACAGAACGACATGGCTACGATCCGACTT",
+    "wf_WES.sample_lb": "lb",
+    "wf_WES.refname": "b37",
+    "wf_WES.misMatch": 1,
+    "wf_WES.nRate": 0.1,
+    "wf_WES.lowQual": 5,
+    "wf_WES.qualRate": 0.5,
+    "wf_WES.qualSys": 2,
+    "wf_WES.bwa_thread": 8,
+    "wf_WES.refseq": "Yes"
+}
