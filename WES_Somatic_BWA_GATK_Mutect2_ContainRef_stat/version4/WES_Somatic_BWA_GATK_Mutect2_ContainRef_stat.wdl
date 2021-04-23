@@ -255,8 +255,6 @@ task bamstat{
    python /bioapp/Bam_StatScripts/merge_bam_stat.py output/*.information.xls > information.xls
    python /bioapp/Bam_StatScripts/merge_cumu.py output/*.cumu.xls > cumu.xls
    python /bioapp/Bam_StatScripts/merge_depth_frequency.py output/*.depth_frequency.xls > depth_frequency.xls
-   Rscript /bioapp/Bam_StatScripts/cumuPlot.R cumu.xls
-   Rscript /bioapp/Bam_StatScripts/histPlot.R  depth_frequency.xls
    cat output/*chrall.stat > chrall.stat
    rm -rf output
    cd ..
