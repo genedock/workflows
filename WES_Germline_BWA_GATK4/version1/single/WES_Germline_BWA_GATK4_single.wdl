@@ -79,7 +79,7 @@ task align_bwa{
         runtime {
                 docker: "seqflow/genedock_wgs:1.0"
                 memory: "16G"
-                disk: "100G"
+                disk: "400G"
                 cpu: 8
         }
         output{
@@ -141,7 +141,7 @@ task WES_MarkdupGvcf_GATK4{
         runtime {
                 docker: "seqflow/genedock_wgs:1.0"
                 memory: "16G"
-                disk: "100G"
+                disk: "400G"
                 cpu: 8
         }
 }
@@ -211,7 +211,7 @@ task bamstat{
  runtime {
         docker: "genedockdx/qc:1.4"
     memory: "16G"
-        disk: "200G" 
+        disk: "400G" 
         cpu: 8
     }
  output{
@@ -244,7 +244,7 @@ task VEP{
     runtime {
         docker: "public/vep:101"
         memory: "16G"
-        disk: "200G"
+        disk: "100G"
         cpu: 4
     }
 }
