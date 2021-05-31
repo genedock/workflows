@@ -1,0 +1,19 @@
+{
+    "Sentieon_WGS_DNAseq.nt": "Int (optional, default = 8)",
+    "Sentieon_WGS_DNAseq.sample_id": "String",
+    "Sentieon_WGS_DNAseq.refname": "String (optional, default = \"hg19\")",
+    "Sentieon_WGS_DNAseq.lane_fq1": "Array[File]",
+    "Sentieon_WGS_DNAseq.lane_fq2": "Array[File]",
+    "Sentieon_WGS_DNAseq.adaptor": "File",
+    "Sentieon_WGS_DNAseq.enableRemoteReadRetrievalForInsertionsInGermlineCallingModes": "String (optional, default = \"1\")",
+    "Sentieon_WGS_DNAseq.chrom": "String (optional, default = \"ALL\")",
+    "Sentieon_WGS_DNAseq.bin_size": "Int (optional, default = 100)",
+    "Sentieon_WGS_DNAseq.align.base_quality_type": "Int (optional, default = 33)",
+    "Sentieon_WGS_DNAseq.align.crop": "Int (optional, default = 10000)",
+    "Sentieon_WGS_DNAseq.align.head_crop": "Int (optional, default = 0)",
+    "Sentieon_WGS_DNAseq.align.trailing": "Int (optional, default = 3)",
+    "Sentieon_WGS_DNAseq.align.leading": "Int (optional, default = 3)",
+    "Sentieon_WGS_DNAseq.align.minlength": "Int (optional, default = 36)",
+    "Sentieon_WGS_DNAseq.align.sliding_window": "String (optional, default = \"4:15\")",
+    "Sentieon_WGS_DNAseq.align.illumina_clip": "String (optional, default = \"2:30:10\")"
+}
