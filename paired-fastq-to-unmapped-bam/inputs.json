@@ -1,0 +1,12 @@
+{
+  "ConvertPairedFastQsToUnmappedBamWf.readgroup_name": "String",
+  "ConvertPairedFastQsToUnmappedBamWf.sample_name": "String",
+  "ConvertPairedFastQsToUnmappedBamWf.fastq_1": "File",
+  "ConvertPairedFastQsToUnmappedBamWf.fastq_2": "File",
+  "ConvertPairedFastQsToUnmappedBamWf.library_name": "String",
+  "ConvertPairedFastQsToUnmappedBamWf.platform_unit": "String",
+  "ConvertPairedFastQsToUnmappedBamWf.run_date": "String",
+  "ConvertPairedFastQsToUnmappedBamWf.platform_name": "String",
+  "ConvertPairedFastQsToUnmappedBamWf.sequencing_center": "String",
+  "ConvertPairedFastQsToUnmappedBamWf.make_fofn": "Boolean"
+}
