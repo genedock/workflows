@@ -1,0 +1,10 @@
+{
+  "HaplotypeCallerGvcf_GATK4.input_bam": "File",
+  "HaplotypeCallerGvcf_GATK4.input_bam_index": "File",
+
+  "HaplotypeCallerGvcf_GATK4.ref_dict": "File",
+  "HaplotypeCallerGvcf_GATK4.ref_fasta": "File",
+  "HaplotypeCallerGvcf_GATK4.ref_fasta_index": "File",
+
+  "HaplotypeCallerGvcf_GATK4.scattered_calling_intervals_list": "File"
+}
