@@ -1,0 +1,37 @@
+{
+  "RNAseq.inputBam": "File",
+
+  "RNAseq.refFasta": "File",
+  "RNAseq.refFastaIndex": "File",
+  "RNAseq.refDict": "File",
+
+  "RNAseq.dbSnpVcf": "File",
+  "RNAseq.dbSnpVcfIndex": "File",
+  "RNAseq.knownVcfs": "Array[File]",
+  "RNAseq.knownVcfsIndices": "Array[File]",
+  "RNAseq.annotationsGTF": "File",
+
+  "#RNAseq.gatk4_docker_override": "String? (optional)",
+  "#RNAseq.star_docker_override": "String? (optional)",
+  "#RNAseq.gitc_docker_override": "String? (optional)",
+
+  "##_COMMENT5": "PATHS",
+  "#RNAseq.gatk_path_override": "/gatk/gatk",
+
+  "##_COMMENT6": "PREEMPTIBLES",
+  "##RNAseq.preemptible_tries": "(optional) Int?",
+
+  "##_COMMENT7": "Misc",
+  "#RNAseq.StarAlign.num_threads": "(optional) Int?",
+  "#RNAseq.StarAlign.star_limitOutSJcollapsed": "(optional) Int?",
+  "RNAseq.StarAlign.additional_disk": "50",
+  "#RNAseq.StarAlign.star_mem_max_gb": "(optional) Int?",
+  "RNAseq.StarGenerateReferences.addtional_disk": 50,
+  "#RNAseq.StarGenerateReferences.num_threads": "(optional) Int?",
+  "#RNAseq.StarGenerateReferences.mem_gb": "(optional) Int?",
+  "#RNAseq.haplotypeScatterCount": "(optional) Int?",
+  "#RNAseq.use_gatk4_for_all_tools": "(optional) Boolean",
+  "#RNAseq.minConfidenceForVariantCalling": "(optional) Int?",
+  "#RNAseq.zippedStarReferences": "(optional) File?",
+  "#RNAseq.readLength": "(optional) Int?"
+}
