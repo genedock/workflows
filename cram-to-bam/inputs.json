@@ -1,0 +1,8 @@
+{
+  "CramToBamFlow.sample_name": "String",
+  "CramToBamFlow.input_cram": "File",
+
+  "CramToBamFlow.ref_dict": "File",
+  "CramToBamFlow.ref_fasta": "File",
+  "CramToBamFlow.ref_fasta_index": "File",
+}
