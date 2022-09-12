@@ -1,0 +1,46 @@
+{
+  "WholeGenomeGermlineSingleSample.sample_and_unmapped_bams": {
+    "sample_name": "String",
+    "base_file_name": "String",
+    "flowcell_unmapped_bams": "Array[File]",
+    "final_gvcf_base_name": "String",
+    "unmapped_bam_suffix": "String"
+  },
+
+  "WholeGenomeGermlineSingleSample.references": {
+    "contamination_sites_ud": "File",
+    "contamination_sites_bed": "File",
+    "contamination_sites_mu": "File",
+    "calling_interval_list": "File",
+    "reference_fasta": {
+      "ref_dict": "File",
+      "ref_fasta": "File",
+      "ref_fasta_index": "File",
+      "ref_alt": "File",
+      "ref_sa": "File",
+      "ref_amb": "File",
+      "ref_bwt": "File",
+      "ref_ann": "File",
+      "ref_pac": "File"
+    },
+    "known_indels_sites_vcfs": "Array[File]",
+    "known_indels_sites_indices": "Array[File]",
+    "dbsnp_vcf": "File",
+    "dbsnp_vcf_index": "File",
+    "evaluation_interval_list": "File",
+    "haplotype_database_file": "File"
+  },
+
+  "WholeGenomeGermlineSingleSample.scatter_settings": {
+    "haplotype_scatter_count": 50,
+    "break_bands_at_multiples_of": 1000000
+  },
+
+  "WholeGenomeGermlineSingleSample.fingerprint_genotypes_file": "File",
+  "WholeGenomeGermlineSingleSample.wgs_coverage_interval_list": "File",
+
+  "WholeGenomeGermlineSingleSample.papi_settings": {
+    "preemptible_tries": 3,
+    "agg_preemptible_tries": 3
+  }
+}
