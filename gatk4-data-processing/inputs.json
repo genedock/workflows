@@ -1,0 +1,20 @@
+{
+  "PreProcessingForVariantDiscovery_GATK4.sample_name": "String",
+  "PreProcessingForVariantDiscovery_GATK4.ref_name": "String",
+  "PreProcessingForVariantDiscovery_GATK4.flowcell_unmapped_bams_list": "File",
+  "PreProcessingForVariantDiscovery_GATK4.unmapped_bam_suffix": "String",
+
+  "PreProcessingForVariantDiscovery_GATK4.ref_dict": "File",
+  "PreProcessingForVariantDiscovery_GATK4.ref_fasta": "File",
+  "PreProcessingForVariantDiscovery_GATK4.ref_fasta_index": "File",
+  "PreProcessingForVariantDiscovery_GATK4.ref_sa": "File",
+  "PreProcessingForVariantDiscovery_GATK4.ref_amb": "File",
+  "PreProcessingForVariantDiscovery_GATK4.ref_bwt": "File",
+  "PreProcessingForVariantDiscovery_GATK4.ref_ann": "File",
+  "PreProcessingForVariantDiscovery_GATK4.ref_pac": "File",
+
+  "PreProcessingForVariantDiscovery_GATK4.dbSNP_vcf": "File",
+  "PreProcessingForVariantDiscovery_GATK4.dbSNP_vcf_index": "File",
+  "PreProcessingForVariantDiscovery_GATK4.known_indels_sites_VCFs": "Array[File]",
+  "PreProcessingForVariantDiscovery_GATK4.known_indels_sites_indices": "Array[File]",
+}
