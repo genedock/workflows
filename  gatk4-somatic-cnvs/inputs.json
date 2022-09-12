@@ -1,0 +1,19 @@
+{
+  "CNVSomaticPairWorkflow.tumor_bam_idx": "File",
+  "CNVSomaticPairWorkflow.normal_bam": "File",
+  "CNVSomaticPairWorkflow.normal_bam_idx": "File",
+  "CNVSomaticPairWorkflow.tumor_bam": "File",
+
+  "CNVSomaticPairWorkflow.ref_fasta": "File",
+  "CNVSomaticPairWorkflow.ref_fasta_fai": "File",
+  "CNVSomaticPairWorkflow.ref_fasta_dict": "File",
+  "CNVSomaticPairWorkflow.common_sites": "File",
+  "CNVSomaticPairWorkflow.read_count_pon": "File",
+  "CNVSomaticPairWorkflow.intervals": "File",
+
+  "CNVSomaticPairWorkflow.gatk_docker": "String",
+
+  "CNVSomaticPairWorkflow.is_run_funcotator": "Boolean",
+  "CNVSomaticPairWorkflow.funcotator_data_sources_tar_gz": "File",
+  "CNVSomaticPairWorkflow.funcotator_transcript_selection_list": "File"
+}
