@@ -1,0 +1,35 @@
+{
+  "PathSeqPipelineWorkflow.input_bam": "File",
+  "PathSeqPipelineWorkflow.sample_name": "String",
+
+  "PathSeqPipelineWorkflow.kmer_file": "File",
+  "PathSeqPipelineWorkflow.microbe_bwa_image": "File",
+  "PathSeqPipelineWorkflow.microbe_fasta": "File",
+  "PathSeqPipelineWorkflow.microbe_fasta_dict": "File",
+  "PathSeqPipelineWorkflow.filter_bwa_image": "File",
+  "PathSeqPipelineWorkflow.taxonomy_file": "File",
+  "PathSeqPipelineWorkflow.is_host_aligned": "false",
+
+  "PathSeqPipelineWorkflow.gatk_docker_override": "genedockdx/gatk:4.0.11.0",
+  "#PathSeqPipelineWorkflow.gatk4_jar_override": "File? (optional)",
+
+  "PathSeqPipelineWorkflow.filter_duplicates": "True",
+  "#PathSeqPipelineWorkflow.min_clipped_read_length": "Int? (optional)",
+  "#PathSeqPipelineWorkflow.filter_bwa_seed_length": "Int? (optional)",
+  "#PathSeqPipelineWorkflow.min_score_identity": "Float? (optional)",
+  "#PathSeqPipelineWorkflow.host_min_identity": "Int? (optional)",
+  "#PathSeqPipelineWorkflow.PathseqPipeline.skip_quality_filters": "Boolean? (optional)",
+  "#PathSeqPipelineWorkflow.PathseqPipeline.default_min_score_identity": "Float (optional, default = 0.9)",
+  "#PathSeqPipelineWorkflow.identity_margin": "Float? (optional)",
+  "#PathSeqPipelineWorkflow.skip_pre_bwa_repartition": "Boolean? (optional)",
+  "PathSeqPipelineWorkflow.divide_by_genome_length": "True",
+  "#PathSeqPipelineWorkflow.bam_partition_size": "Int? (optional)",
+  "#PathSeqPipelineWorkflow.PathseqPipeline.default_identity_margin": "Float (optional, default = 0.02)",
+  "#PathSeqPipelineWorkflow.PathseqPipeline.default_ram_mb": "Int (optional, default = 208000)",
+
+  "#PathSeqPipelineWorkflow.mem_gb": "Int? (optional)",
+  "#PathSeqPipelineWorkflow.cpu": "Int? (optional)",
+  "#PathSeqPipelineWorkflow.increase_disk_size": "Int? (optional)",
+  "#PathSeqPipelineWorkflow.PathseqPipeline.default_disk_space_gb": "Float (optional, default = 400.0)",
+  "#PathSeqPipelineWorkflow.PathseqPipeline.use_ssd": "Boolean (optional, default = true)"
+}
